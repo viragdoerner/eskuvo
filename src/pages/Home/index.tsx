@@ -38,7 +38,7 @@ const Home = () => {
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
-        icon="graphs.svg"
+        icon="spanyolfa.jpg"
         id="other"
       />
       <VenueBlock
@@ -51,7 +51,7 @@ const Home = () => {
         direction="left"
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="waving.svg"
+        icon="spanyolvadaszat.jpg"
         id="product"
       />
       <FormBlock

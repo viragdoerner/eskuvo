@@ -1,6 +1,5 @@
 import { Row } from "antd";
 import styled from "styled-components";
-import background from "./spanyolfa.jpg";
 
 export const ContentSection = styled("section")`
   position: relative;

@@ -5,21 +5,21 @@
     {
       "title": "Dress Code",
       "content": "Elegáns, de kényelmes",
-      "icon": "notes.svg"
+      "icon": "dress-code.png"
     },
     {
       "title": "Ajándék",
       "content": "Alapvetően pénz, amennyit szívesen bele tudsz adni az eseménybe",
-      "icon": "notes.svg"
+      "icon": "giftbox.png"
     },{
       "title": "Programok",
       "content": "A szokásos: vendégvárás, szertartás, játékok, vacsora és buli hajnalig",
-      "icon": "notes.svg"
+      "icon": "project-management.png"
     },
     {
       "title": "Egyéb kérdés esetén",
       "content": "+36303699697",
-      "icon": "notes.svg"
+      "icon": "question-mark.png"
     }
   ]
 }
