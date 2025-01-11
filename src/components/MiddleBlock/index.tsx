@@ -27,14 +27,12 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
+              <Countdown
+                value={deadline}
+                format="D nap HH:mm:ss"
+                className="h6 title"
+              />
               <h6>{t(title)}</h6>
-              <h6>
-                <Countdown
-                  value={deadline}
-                  format="D nap HH:mm:ss"
-                  className="h6 title"
-                />
-              </h6>
               <Content>{t(content)}</Content>
               
               {button && (
