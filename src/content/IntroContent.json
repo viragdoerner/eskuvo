@@ -1,12 +1,12 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Tibi és Virág",
+  "text": "Szeretettel várunk esküvőnkön! (Ha meg vagy hívva lol)",
   "button": [
     {
-      "title": "Explore"
+      "title": "Tudnivalók"
     },
     {
-      "title": "Learn more",
+      "title": "Jelezz vissza!",
       "color": "#fff"
     }
   ]
