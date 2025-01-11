@@ -28,16 +28,17 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
               <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
               <h6>
                 <Countdown
                   value={deadline}
                   format="D nap HH:mm:ss"
                   className="h6 title"
                 />
-                </h6>
+              </h6>
+              <Content>{t(content)}</Content>
+              
               {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
+                <Button name="submit" onClick={() => scrollTo("contact")}>
                   {t(button)}
                 </Button>
               )}

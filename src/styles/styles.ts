@@ -50,14 +50,28 @@ export const Styles = createGlobalStyle`
             box-shadow: #123524 0px 0px 0px 1px;
         }
     }
+ 
+    .ant-statistic-content-value {
+        font-family: 'Motiva Sans Bold', serif;
+        color: #85A947;
+        font-size: 64px;
+        line-height: 1;
+
+        @media only screen and (max-width: 890px) {
+          font-size: 55px;
+        }
+      
+        @media only screen and (max-width: 414px) {
+          font-size: 40px;
+        }
+    }
 
     h1,
     h2,
     h3,
     h4,
     h5,
-    h6, 
-    .ant-statistic-content-value {
+    h6 {
         font-family: 'Motiva Sans Bold', serif;
         color: #618264;
         font-size: 56px;

@@ -42,7 +42,7 @@ const Home = () => {
         title={MissionContent.title}
         content={MissionContent.text}
         icon="product-launch.svg"
-        id="mission"
+        id="missionn"
       />
       <ContentBlock
         direction="left"
