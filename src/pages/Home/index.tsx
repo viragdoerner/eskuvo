@@ -13,12 +13,13 @@ const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const OtherBlock = lazy(() => import("../../components/OtherBlock"));
 const VenueBlock = lazy(() => import("../../components/VenueBlock"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const TitleBlock = lazy(() => import("../../components/TitleBlock"));
 
 const Home = () => {
   return (
-    <Container>
+    <div>
       <ScrollToTop />
-      <ContentBlock
+      <TitleBlock
         direction="right"
         title={IntroContent.title}
         content={IntroContent.text}
@@ -57,7 +58,7 @@ const Home = () => {
         content={ContactContent.text}
         id="contact"
       />
-    </Container>
+    </div>
   );
 };
 
