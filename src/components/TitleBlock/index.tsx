@@ -10,14 +10,15 @@ import {
   Content,
   ContentWrapper,
   ServiceWrapper,
-  MinTitle,
+  Title,
   MinPara,
   StyledRow,
   ButtonWrapper,
 } from "./styles";
+import { ParallaxBanner } from "react-scroll-parallax";
+import background from "./spanyolfa.jpg";
 
 const ContentBlock = ({
-  icon,
   title,
   content,
   section,
@@ -34,6 +35,11 @@ const ContentBlock = ({
   };
 
   return (
+    <ParallaxBanner
+    layers={[
+      { image: background, speed: -20 }]}
+    className="aspect-[2/1]"
+  >
     <ContentSection>
       <Fade direction={direction} triggerOnce>
         <StyledRow
@@ -43,11 +49,11 @@ const ContentBlock = ({
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <h6>{t(title)}</h6>
+              <Title>{t(title)}</Title>
               <Content>{t(content)}</Content>
               {direction === "right" ? (
                 <ButtonWrapper>
@@ -92,7 +98,7 @@ const ContentBlock = ({
                                 width="60px"
                                 height="60px"
                               />
-                              <MinTitle>{t(item.title)}</MinTitle>
+                              <Title>{t(item.title)}</Title>
                               <MinPara>{t(item.content)}</MinPara>
                             </Col>
                           );
@@ -105,7 +111,7 @@ const ContentBlock = ({
           </Col>
         </StyledRow>
       </Fade>
-    </ContentSection>
+    </ContentSection></ParallaxBanner>
   );
 };
 

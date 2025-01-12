@@ -8,7 +8,6 @@ import ContactContent from "../../content/ContactContent.json";
 
 const FormBlock = lazy(() => import("../../components/FormBlock"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
-const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const OtherBlock = lazy(() => import("../../components/OtherBlock"));
 const VenueBlock = lazy(() => import("../../components/VenueBlock"));
@@ -33,20 +32,21 @@ const Home = () => {
         button={MiddleBlockContent.button}
         id="date"
       />
+      <VenueBlock
+        direction="left"
+        title={VenueContent.title}
+        content={VenueContent.text}
+        id="venue"
+      />
       <OtherBlock
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
         section={AboutContent.section}
-        icon="spanyolfa.jpg"
+        icon="cabodegata.jpg"
         id="other"
       />
-      <VenueBlock
-        direction="right"
-        title={VenueContent.title}
-        content={VenueContent.text}
-        id="venue"
-      />
+     
       <ContentBlock
         direction="left"
         title={ProductContent.title}

@@ -3,15 +3,38 @@ import styled from "styled-components";
 
 export const ContentSection = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding: 12rem 4rem 12rem;
 
   @media only screen and (max-width: 1024px) {
-    padding: 4rem 0 4rem;
+    padding: 2rem 4rem 4rem;
+  }
+
+  @media only screen and (max-width: 414px) {
+    padding: 12rem 1rem 12rem
   }
 `;
 
 export const Content = styled("p")`
-  margin: 1.5rem 0 2rem 0;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-size: 50px;
+`;
+export const Title = styled("h6")`
+  font-family: 'Motiva Sans Bold', serif;
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
+  margin-bottom:0;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  @media only screen and (max-width: 890px) {
+    font-size: 47px; 
+  }
+
+  @media only screen and (max-width: 414px) {
+    font-size: 50px;
+  }
 `;
 
 export const StyledRow = styled(Row)`
@@ -34,14 +57,7 @@ export const ServiceWrapper = styled("div")`
   max-width: 100%;
 `;
 
-export const MinTitle = styled("h6")`
-  font-size: 15px;
-  line-height: 1rem;
-  padding: 0.5rem 0;
-  text-transform: uppercase;
-  color: #000;
-  font-family: "Motiva Sans Light", sans-serif;
-`;
+
 
 export const MinPara = styled("p")`
   font-size: 13px;

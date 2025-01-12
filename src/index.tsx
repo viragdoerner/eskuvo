@@ -5,11 +5,12 @@ import "antd/dist/antd.css";
 
 import Router from "./router";
 import i18n from "./translation";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const App = () => (
   <BrowserRouter>
     <I18nextProvider i18n={i18n}>
-      <Router />
+      <ParallaxProvider><Router/></ParallaxProvider>
     </I18nextProvider>
   </BrowserRouter>
 );
