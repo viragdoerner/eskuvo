@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
@@ -19,12 +19,22 @@ import {
 } from "./styles";
 import i18n from "i18next";
 
-
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const toggleButton = () => {
     setVisibility(!visible);
+  };
+
+  const toggleMusic = (play?: boolean) => {
+    if (!audioRef.current) return;
+  
+    const shouldPlay = play ?? !isPlaying;
+  
+    shouldPlay ? audioRef.current.play() : audioRef.current.pause();
+    setIsPlaying(shouldPlay);
   };
 
   const MenuItem = () => {
@@ -35,7 +45,7 @@ const Header = ({ t }: { t: TFunction }) => {
       });
       setVisibility(false);
     };
-    
+
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("date")}>
@@ -61,19 +71,23 @@ const Header = ({ t }: { t: TFunction }) => {
       </>
     );
   };
+
   const handleChange = (language: string) => {
     i18n.changeLanguage(language);
   };
+
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <audio ref={audioRef} src="/music.mp3" loop></audio>
+        <Row justify="space-between" align="middle">
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="101px" height="64px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
           </NotHidden>
+         
           <Burger onClick={toggleButton}>
             <Outline />
           </Burger>
@@ -95,7 +109,13 @@ const Header = ({ t }: { t: TFunction }) => {
               />
             </LanguageSwitch>
           </LanguageSwitchContainer>
-
+          <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={()=> toggleMusic()}>
+            <SvgIcon
+              src={isPlaying ? "pause.png" : "play.png"}
+              width="20px"
+              height="20px"
+            />
+          </div>
         </Row>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>

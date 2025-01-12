@@ -2,7 +2,6 @@ import { lazy } from "react";
 import TitleContent from "../../content/TitleContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import OtherContent from "../../content/OtherContent.json";
-import VenueContent from "../../content/VenueContent.json";
 import FormContent from "../../content/FormContent.json";
 
 const FormBlock = lazy(() => import("../../components/FormBlock"));
@@ -33,8 +32,6 @@ const Home = () => {
       />
       <VenueBlock
         direction="left"
-        title={VenueContent.title}
-        content={VenueContent.text}
         id="venue"
       />
 
