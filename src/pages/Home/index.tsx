@@ -3,7 +3,6 @@ import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import VenueContent from "../../content/VenueContent.json";
-import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
 const FormBlock = lazy(() => import("../../components/FormBlock"));
@@ -11,7 +10,6 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const OtherBlock = lazy(() => import("../../components/OtherBlock"));
 const VenueBlock = lazy(() => import("../../components/VenueBlock"));
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const TitleBlock = lazy(() => import("../../components/TitleBlock"));
 const GalleryBlock = lazy(() => import("../../components/GalleryBlock"));
 
