@@ -8,7 +8,6 @@ import {
   NavLink,
   Extra,
   LogoContainer,
-  Label,
   LanguageSwitch,
   LanguageSwitchContainer,
 } from "./styles";
@@ -37,7 +36,6 @@ const Footer = ({ t }: { t: TFunction }) => {
               </LogoContainer>
             </NavLink>
             <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
                   <SvgIcon
@@ -47,9 +45,9 @@ const Footer = ({ t }: { t: TFunction }) => {
                     height="30px"
                   />
                 </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
+                <LanguageSwitch onClick={() => handleChange("hu")}>
                   <SvgIcon
-                    src="spain.svg"
+                    src="hungary.svg"
                     aria-label="homepage"
                     width="30px"
                     height="30px"

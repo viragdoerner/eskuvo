@@ -1,9 +1,9 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
+import TitleContent from "../../content/TitleContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
+import OtherContent from "../../content/OtherContent.json";
 import VenueContent from "../../content/VenueContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import FormContent from "../../content/FormContent.json";
 
 const FormBlock = lazy(() => import("../../components/FormBlock"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -19,9 +19,9 @@ const Home = () => {
       <ScrollToTop />
       <TitleBlock
         direction="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
+        title={TitleContent.title}
+        content={TitleContent.text}
+        button={TitleContent.button}
         icon="cabodegata.jpg"
         id="intro"
       />
@@ -39,16 +39,16 @@ const Home = () => {
       />
 
      <FormBlock
-        title={ContactContent.title}
-        content={ContactContent.text}
+        title={FormContent.title}
+        content={FormContent.text}
         id="contact"
       />
       <GalleryBlock/>
       <OtherBlock
         direction="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
+        title={OtherContent.title}
+        content={OtherContent.text}
+        section={OtherContent.section}
         icon="cabodegata.jpg"
         id="other"
       />

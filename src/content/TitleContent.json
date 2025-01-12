@@ -1,0 +1,13 @@
+{
+  "title": "TitleContent_title",
+  "text": "TitleContent_text",
+  "button": [
+    {
+      "title": "TitleContent_button1"
+    },
+    {
+      "title": "TitleContent_button2",
+      "color": "#fff"
+    }
+  ]
+}

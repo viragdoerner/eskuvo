@@ -1,0 +1,25 @@
+{
+  "title": "OtherContent_title",
+  "text": "",
+  "section": [
+    {
+      "title": "OtherContent_section1_title",
+          "content": "OtherContent_section1_content",
+      "icon": "dress.svg"
+    },
+    {
+      "title": "OtherContent_section2_title",
+          "content": "OtherContent_section2_content",
+      "icon": "gift.svg"
+    },{
+      "title": "OtherContent_section3_title",
+      "content": "OtherContent_section3_content",
+      "icon": "plan.svg"
+    },
+    {
+      "title": "OtherContent_section4_title",
+      "content": "OtherContent_section4_content",
+      "icon": "question.svg"
+    }
+  ]
+}
