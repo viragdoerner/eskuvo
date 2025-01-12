@@ -13,6 +13,7 @@ const OtherBlock = lazy(() => import("../../components/OtherBlock"));
 const VenueBlock = lazy(() => import("../../components/VenueBlock"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const TitleBlock = lazy(() => import("../../components/TitleBlock"));
+const GalleryBlock = lazy(() => import("../../components/GalleryBlock"));
 
 const Home = () => {
   return (
@@ -38,6 +39,13 @@ const Home = () => {
         content={VenueContent.text}
         id="venue"
       />
+
+     <FormBlock
+        title={ContactContent.title}
+        content={ContactContent.text}
+        id="contact"
+      />
+      <GalleryBlock/>
       <OtherBlock
         direction="left"
         title={AboutContent.title}
@@ -45,19 +53,6 @@ const Home = () => {
         section={AboutContent.section}
         icon="cabodegata.jpg"
         id="other"
-      />
-     
-      <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="spanyolvadaszat.jpg"
-        id="product"
-      />
-      <FormBlock
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
       />
     </div>
   );
