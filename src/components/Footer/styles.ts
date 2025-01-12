@@ -38,10 +38,7 @@ export const Extra = styled("section")`
   padding-bottom: 2rem;
 `;
 
-export const LogoContainer = styled("div")`
-  display: flex;
-  position: relative;
-`;
+
 
 export const Para = styled("div")`
   color: #618264;
@@ -126,15 +123,7 @@ export const FooterContainer = styled("div")`
   }
 `;
 
-export const Language = styled("h4")`
-  font-size: 22px;
-  text-transform: capitalize;
-  color: #618264;
 
-  @media screen and (max-width: 414px) {
-    padding: 1.5rem 0;
-  }
-`;
 
 export const Label = styled("label")`
   font-size: 22px;
@@ -150,21 +139,7 @@ export const Label = styled("label")`
   }
 `;
 
-export const LanguageSwitch = styled("div")`
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-
-  &:hover,
-  &:active,
-  &:focus {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-`;
-
-export const LanguageSwitchContainer = styled("div")`
+export const LogoContainer = styled("div")`
   display: flex;
-  justify-content: space-between;
-  width: 85px;
+  position: relative;
 `;

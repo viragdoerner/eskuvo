@@ -1,30 +1,32 @@
-import { Row, Col } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { Row } from "antd";
+import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import i18n from "i18next";
 import {
   NavLink,
   Extra,
-  LogoContainer,
-  LanguageSwitch,
-  LanguageSwitchContainer,
+  LogoContainer
 } from "./styles";
 
-const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+const Footer = () => {
 
   return (
       <Extra>
         <Container>
           <Row
-            justify="space-between"
+            justify="center"
             align="middle"
             style={{ paddingTop: "3rem" }}
           >
+            <LogoContainer>
+                <SvgIcon
+                  src="sheepvirag.png"
+                  aria-label="virag"
+                  width="100%"
+                  height="64px"
+                />
+              </LogoContainer>
             <NavLink to="/">
               <LogoContainer>
                 <SvgIcon
@@ -34,27 +36,17 @@ const Footer = ({ t }: { t: TFunction }) => {
                   height="64px"
                 />
               </LogoContainer>
+
             </NavLink>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("hu")}>
-                  <SvgIcon
-                    src="hungary.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
-            </Col>
+             <LogoContainer>
+                <SvgIcon
+                  src="sheeptibi.png"
+                  aria-label="tibi"
+                  width="100%"
+                  height="64px"
+                />
+              </LogoContainer>
+            
           </Row>
         </Container>
       </Extra>

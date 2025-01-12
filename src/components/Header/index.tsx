@@ -14,7 +14,11 @@ import {
   Label,
   Outline,
   Span,
+  LanguageSwitch,
+  LanguageSwitchContainer,
 } from "./styles";
+import i18n from "i18next";
+
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
@@ -31,6 +35,7 @@ const Header = ({ t }: { t: TFunction }) => {
       });
       setVisibility(false);
     };
+    
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("date")}>
@@ -56,7 +61,9 @@ const Header = ({ t }: { t: TFunction }) => {
       </>
     );
   };
-
+  const handleChange = (language: string) => {
+    i18n.changeLanguage(language);
+  };
   return (
     <HeaderSection>
       <Container>
@@ -70,6 +77,25 @@ const Header = ({ t }: { t: TFunction }) => {
           <Burger onClick={toggleButton}>
             <Outline />
           </Burger>
+          <LanguageSwitchContainer>
+            <LanguageSwitch onClick={() => handleChange("en")}>
+              <SvgIcon
+                src="united-states.svg"
+                aria-label="homepage"
+                width="30px"
+                height="30px"
+              />
+            </LanguageSwitch>
+            <LanguageSwitch onClick={() => handleChange("hu")}>
+              <SvgIcon
+                src="hungary.svg"
+                aria-label="homepage"
+                width="30px"
+                height="30px"
+              />
+            </LanguageSwitch>
+          </LanguageSwitchContainer>
+
         </Row>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>
