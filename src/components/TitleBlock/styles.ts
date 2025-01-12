@@ -10,7 +10,7 @@ export const ContentSection = styled("section")`
   }
 
   @media only screen and (max-width: 414px) {
-    padding: 12rem 1rem 12rem
+    padding: 1rem 1rem 1rem
   }
 `;
 
@@ -74,5 +74,8 @@ export const ButtonWrapper = styled("div")`
 
   button:last-child {
     margin-left: 20px;
+  }
+  @media only screen and (max-width: 414px) {
+    padding-top: 10rem
   }
 `;

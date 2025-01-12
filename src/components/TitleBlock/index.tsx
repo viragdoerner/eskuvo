@@ -51,7 +51,7 @@ const ContentBlock = ({
   return (
     <ParallaxBanner
     layers={[
-      { image: bgImage, speed: -20 }]}
+      { image: bgImage, speed: -15 }]}
     className="aspect-[2/1]"
   >
     <ContentSection>
