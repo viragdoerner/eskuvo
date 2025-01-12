@@ -88,9 +88,6 @@ const Header = ({ t }: { t: TFunction }) => {
             <MenuItem />
           </NotHidden>
          
-          <Burger onClick={toggleButton}>
-            <Outline />
-          </Burger>
           <LanguageSwitchContainer>
             <LanguageSwitch onClick={() => handleChange("en")}>
               <SvgIcon
@@ -116,6 +113,9 @@ const Header = ({ t }: { t: TFunction }) => {
               height="20px"
             />
           </div>
+          <Burger onClick={toggleButton}>
+            <Outline />
+          </Burger>
         </Row>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>
