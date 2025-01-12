@@ -3,6 +3,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button } from "../../common/Button";
 import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
+import Container from "../../common/Container";
 const { Countdown } = Statistic;
 
 interface MiddleBlockProps {
@@ -23,7 +24,8 @@ const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
   const deadline = new Date('2025-06-08T14:00:00Z').getTime();
 
   return (
-    <MiddleBlockSection>
+    <Container>
+      <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
         <Row justify="center" align="middle" id={id}>
           <ContentWrapper>
@@ -47,6 +49,7 @@ const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
         </Row>
       </Slide>
     </MiddleBlockSection>
+    </Container>
   );
 };
 

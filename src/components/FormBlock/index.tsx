@@ -4,10 +4,12 @@ import { Slide } from "react-awesome-reveal";
 import { ContactProps } from "./types";
 import Block from "../Block";
 import { ContactContainer } from "./styles";
+import Container from "../../common/Container";
 
 const Contact = ({ title, content, id}: ContactProps) => {
 
   return (
+    <Container>
     <ContactContainer id={id}>
       <Row justify="space-between" align="top">
         <Col lg={10} md={11} sm={24} xs={24}>
@@ -26,6 +28,7 @@ const Contact = ({ title, content, id}: ContactProps) => {
         </Col>
       </Row>
     </ContactContainer>
+    </Container>
   );
 };
 

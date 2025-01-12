@@ -17,7 +17,7 @@ const TitleBlock = lazy(() => import("../../components/TitleBlock"));
 
 const Home = () => {
   return (
-    <Container>
+    <div>
       <ScrollToTop />
       <TitleBlock
         direction="right"
@@ -59,7 +59,7 @@ const Home = () => {
         content={ContactContent.text}
         id="contact"
       />
-    </Container>
+    </div>
   );
 };
 

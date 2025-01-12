@@ -15,6 +15,7 @@ import {
   StyledRow,
   ButtonWrapper,
 } from "./styles";
+import Container from "../../common/Container";
 
 const ContentBlock = ({
   icon,
@@ -34,6 +35,7 @@ const ContentBlock = ({
   };
 
   return (
+    <Container>
     <ContentSection>
       <Fade direction={direction} triggerOnce>
         <StyledRow
@@ -106,6 +108,7 @@ const ContentBlock = ({
         </StyledRow>
       </Fade>
     </ContentSection>
+    </Container>
   );
 };
 
