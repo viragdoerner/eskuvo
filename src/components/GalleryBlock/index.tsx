@@ -12,14 +12,32 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import styled from "styled-components";
 
 import photos from "./photos";
+
+const Container = styled.div`
+  background-color: #E9EED9;
+  padding: 4rem;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 4rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 4rem 1rem;
+  }
+
+  @media only screen and (max-width: 414px) {
+    padding: 4rem 1rem;
+  }
+`;
 
 export default function App() {
   const [index, setIndex] = useState(-1);
 
   return (
-    <div id="gallery" className="gallery-container"  style={{ backgroundColor: '#E9EED9', padding: '5rem' }}>
+    <Container id="gallery" className="gallery-container" >
       <RowsPhotoAlbum photos={photos} targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
       <Lightbox
@@ -30,6 +48,6 @@ export default function App() {
         // enable optional lightbox plugins
         plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
       />
-    </div>
+    </Container>
   );
 }
