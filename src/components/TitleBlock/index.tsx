@@ -16,7 +16,9 @@ import {
   ButtonWrapper,
 } from "./styles";
 import { ParallaxBanner } from "react-scroll-parallax";
-import background from "./spanyolfa.jpg";
+import backgroundLarge from "./spanyolfa.jpg";
+import backgroundSmall from "./spanyolfa-allitott.jpg";
+import { useEffect, useState } from "react";
 
 const ContentBlock = ({
   title,
@@ -27,6 +29,18 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
+  const [bgImage, setBgImage] = useState(backgroundLarge);
+
+  useEffect(() => {
+    const updateBackground = () => {
+      setBgImage(window.innerWidth <= 768 ? backgroundSmall : backgroundLarge);
+    };
+    updateBackground();
+    window.addEventListener("resize", updateBackground);
+    return () => {
+      window.removeEventListener("resize", updateBackground);
+    };
+  }, []);
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -37,7 +51,7 @@ const ContentBlock = ({
   return (
     <ParallaxBanner
     layers={[
-      { image: background, speed: -20 }]}
+      { image: bgImage, speed: -20 }]}
     className="aspect-[2/1]"
   >
     <ContentSection>
