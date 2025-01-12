@@ -15,13 +15,13 @@ import {
   Outline,
   Span,
   LanguageSwitch,
-  LanguageSwitchContainer,
 } from "./styles";
 import i18n from "i18next";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [language, setLanguage] = useState<"en" | "hu">("en"); // Default language
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const toggleButton = () => {
@@ -30,11 +30,17 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const toggleMusic = (play?: boolean) => {
     if (!audioRef.current) return;
-  
+
     const shouldPlay = play ?? !isPlaying;
-  
+
     shouldPlay ? audioRef.current.play() : audioRef.current.pause();
     setIsPlaying(shouldPlay);
+  };
+
+  const toggleLanguage = () => {
+    const newLanguage = language === "en" ? "hu" : "en";
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   const MenuItem = () => {
@@ -72,10 +78,6 @@ const Header = ({ t }: { t: TFunction }) => {
     );
   };
 
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
-
   return (
     <HeaderSection>
       <Container>
@@ -87,26 +89,18 @@ const Header = ({ t }: { t: TFunction }) => {
           <NotHidden>
             <MenuItem />
           </NotHidden>
-         
-          <LanguageSwitchContainer>
-            <LanguageSwitch onClick={() => handleChange("en")}>
-              <SvgIcon
-                src="united-states.svg"
-                aria-label="homepage"
-                width="30px"
-                height="30px"
-              />
-            </LanguageSwitch>
-            <LanguageSwitch onClick={() => handleChange("hu")}>
-              <SvgIcon
-                src="hungary.svg"
-                aria-label="homepage"
-                width="30px"
-                height="30px"
-              />
-            </LanguageSwitch>
-          </LanguageSwitchContainer>
-          <div style={{ display: "flex", alignItems: "center", cursor: "pointer" }} onClick={()=> toggleMusic()}>
+          <LanguageSwitch onClick={toggleLanguage} style={{ cursor: "pointer" }}>
+            <SvgIcon
+              src={language === "en" ? "hungary.svg" : "united-states.svg"}
+              aria-label="language-switch"
+              width="30px"
+              height="30px"
+            />
+          </LanguageSwitch>
+          <div
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+            onClick={() => toggleMusic()}
+          >
             <SvgIcon
               src={isPlaying ? "pause.png" : "play.png"}
               width="20px"
