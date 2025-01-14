@@ -21,7 +21,7 @@ import i18n from "i18next";
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [language, setLanguage] = useState<"en" | "hu">("en"); // Default language
+  const [language, setLanguage] = useState<"en" | "hu">("hu"); // Default language
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const toggleButton = () => {
