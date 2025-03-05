@@ -17,8 +17,8 @@ import torredelmar from "./images/torredelmar.jpg";
 import tura from "./images/tura.jpg";
 import tyukol from "./images/tyukol.jpeg";
 import ujev from "./images/ujev.jpg";
-import vadasztatas from "./images/vadasztatas.jpg";
 import zold from "./images/zold.jpg";
+import spanyolvadaszat from "./images/spanyolvadaszat.jpg";
 
 const photos = [
   {
@@ -136,16 +136,16 @@ const photos = [
     alt: "New Year celebration",
   },
   {
-    src: vadasztatas,
-    width: 2048,
-    height: 1536,
-    alt: "Hunting experience in the wild",
-  },
-  {
     src: zold,
     width: 1536,
     height: 2048,
     alt: "Fun moment with green hair",
+  },
+  {
+    src: spanyolvadaszat,
+    width: 1440,
+    height: 1080,
+    alt: "Cabra hunting",
   },
 ];
 

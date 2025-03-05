@@ -95,7 +95,7 @@ const ContentBlock = ({
                                 height="60px"
                               />
                               <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
+                              <MinPara dangerouslySetInnerHTML={{__html: t(item.content)}}></MinPara>
                             </Col>
                           );
                         }

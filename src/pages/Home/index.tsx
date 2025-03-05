@@ -46,7 +46,7 @@ const Home = () => {
         title={OtherContent.title}
         content={OtherContent.text}
         section={OtherContent.section}
-        icon="cabodegata.jpg"
+        icon="minijuhok.jpg"
         id="other"
       />
     </div>
